@@ -1,12 +1,6 @@
 #lang racket
 
-;; --- Day 1: Report Repair ---
-
-(define nums
-  (call-with-input-file "input.txt"
-    (lambda (in)
-      (for/list ([line (in-lines in)])
-        (string->number line)))))
+; --- Day 1: Report Repair ---
 
 ;After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.
 ;
@@ -31,6 +25,12 @@
 ;In this list, the two entries that sum to 2020 are 1721 and 299. Multiplying them together produces 1721 * 299 = 514579, so the correct answer is 514579.
 ;
 ;Of course, your expense report is much larger. Find the two entries that sum to 2020; what do you get if you multiply them together?
+
+(define nums
+  (call-with-input-file "input.txt"
+    (lambda (in)
+      (for/list ([line (in-lines in)])
+        (string->number line)))))
 
 (for*/first ([a (in-list nums)]
              [b (in-list nums)]
